@@ -1,0 +1,598 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #fffdfe;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #104d62;
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 40px;
+}
+
+header:hover {
+  background-color: #0e3a4a;
+  transition: background-color 0.3s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li {
+  font-size: 16px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ffca47;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  order: 1;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Estilos específicos para la versión responsive */
+@media only screen and (max-width: 768px) {
+  header {
+      align-items: flex-start;
+  }
+
+  .header-title {
+      font-size: 24px;
+      margin-left: 110px;
+  }
+
+  .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 120px;
+      left: 0;
+      right: 0;
+      background-color: #104d62;
+      padding: 20px;
+      box-shadow: none; /* Elimina la sombra en la versión mobile */
+  }
+
+  .menu.show {
+      display: flex;
+  }
+
+  .menu.show .menu-button,
+  .menu.show .menu-icon {
+      display: none;
+  }
+
+  .menu-button,
+  .menu-icon {
+      display: block;
+  }
+}
+
+
+main {
+  padding: 20px;
+}
+
+#banner {
+  position: relative;
+  margin-top: 140px;
+  height: 400px; /* Aumenté la altura para dar más espacio al contenido */
+  overflow: hidden;
+  background-color: #104d62; /* Fondo de respaldo en caso de que la imagen no cargue o no cubra completamente */
+  border-radius: 10px;
+}
+
+.imagen-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%); /* Aplicar un efecto de atenuación a la imagen */
+}
+
+.texto-banner {
+  position: absolute;
+  color: #fffdfe;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Asegurar que el texto esté sobre la imagen */
+}
+
+.subtitulo-banner {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+#banner:hover .imagen-banner {
+  filter: brightness(100%); /* Aumentar el brillo al pasar el ratón para resaltar la imagen */
+}
+
+.seccion {
+  background: #104d62; /* Fondo principal */
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  color: #fffdfe; /* Texto blanco */
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.listado-eventos {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.evento {
+  background-color: #fffdfe; /* Fondo blanco */
+  border: 1px solid #104d62; /* Borde principal */
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.titulo-evento {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #104d62; /* Color principal */
+}
+
+.descripcion-evento {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #fff; /* Texto más oscuro para mejorar la legibilidad */
+}
+
+.detalle-evento {
+  font-size: 14px;
+  color: #555; /* Texto gris para mejor contraste */
+}
+
+.parrafo-sobre-nosotros {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.imagen-alba-roni {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+#contacto {
+  background-color: #104d62;
+  padding: 40px 20px;
+  color: #fffdfe;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.info-contacto {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.parrafo-contacto {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.parrafo-contacto:last-child {
+  margin-bottom: 0;
+}
+
+
+footer {
+  background: #104d62;
+  padding: 20px;
+  text-align: center;
+  color: #fffdfe;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #fffdfe; /* Línea superior para separar del contenido principal */
+}
+
+.footer-info {
+  flex-grow: 1; /* Se expandirá para ocupar todo el espacio disponible */
+}
+
+.boton-ir-arriba {
+  color: #fffdfe;
+  text-decoration: none;
+  border: 1px solid #fffdfe;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.boton-ir-arriba:hover {
+  background-color: #fffdfe;
+  color: #104d62;
+}
+
+.footer-links a {
+  color: #fffdfe;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+
+#blog,
+#testimonios,
+#recursos,
+#calendario,
+#videos,
+#faq,
+#evaluacion,
+#citas {
+  background: #104d62;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: #fffdfe;
+}
+
+#blog h2,
+#testimonios h2,
+#recursos h2,
+#calendario h2,
+#videos h2,
+#faq h2,
+#evaluacion h2,
+#citas h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#blog {
+  background-color: #104d62; /* Fondo de color diferente */
+  padding: 40px 20px;
+  text-align: center;
+  color: #fffdfe; /* Texto en blanco */
+}
+
+.entrada-blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.entrada-blog img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.contenido-entrada {
+  text-align: left;
+}
+
+.contenido-entrada h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.fecha-publicacion {
+  color: #a0a0a0; /* Color de texto gris claro para la fecha */
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.resumen {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #ffca47; /* Color de texto amarillo para los enlaces */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #d6f5ff; /* Cambiado a un tono más claro de azul al pasar el ratón */
+}
+
+
+#testimonios {
+  background-color: #104d62; /* Fondo de color diferente */
+  padding: 40px 20px;
+  text-align: center;
+  color: #fffdfe; /* Texto en blanco */
+}
+
+.testimonial {
+  background-color: #1a2c3e; /* Fondo de color diferente para cada testimonio */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.testimonial p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.testimonial .contenido {
+  font-style: italic;
+}
+
+.testimonial .autor {
+  font-weight: bold;
+}
+
+#recursos {
+  background-color: #104d62; /* Fondo de color diferente */
+  padding: 40px 20px;
+  text-align: center;
+  color: #fffdfe; /* Texto en blanco */
+}
+
+.recurso-descargable {
+  background-color: #1a2c3e; /* Fondo de color diferente para cada recurso */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.recurso-descargable img {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.info-recurso {
+  text-align: left;
+}
+
+.info-recurso h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-recurso .descripcion {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.descargar-enlace {
+  color: #ffca47; /* Color de texto amarillo para los enlaces */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.descargar-enlace:hover {
+  color: #d6f5ff; /* Cambiado a un tono más claro de azul al pasar el ratón */
+}
+
+#calendario {
+  background-color: #104d62; /* Fondo de color diferente */
+  padding: 40px 20px;
+  text-align: center;
+  color: #fffdfe; /* Texto en blanco */
+}
+
+.evento {
+  background-color: #1a2c3e; /* Fondo de color diferente para cada evento */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px; /* Bordes redondeados */
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+}
+
+.evento h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffca47; /* Color de título */
+}
+
+.detalle-evento {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #d6f5ff; /* Color del texto de detalles */
+}
+
+#videos {
+  background-color: #104d62; /* Fondo de color diferente */
+  padding: 40px 20px;
+  text-align: center;
+  color: #fffdfe; /* Texto en blanco */
+}
+
+.video {
+  margin-bottom: 40px;
+}
+
+
+.video h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.descripcion-video {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #d6f5ff; /* Color del texto de descripción */
+}
+
+/* Estilos específicos para la versión responsive */
+@media only screen and (max-width: 768px) {
+  .video iframe {
+    width: 60%; /* Hacer que los videos sean responsivos en dispositivos móviles */
+    height: 200px; /* Ajustar la altura según sea necesario */
+  }
+}
+
+#citas {
+  background-color: #104d62; /* Fondo de color diferente */
+  padding: 40px 20px;
+  text-align: center;
+  color: #fffdfe; /* Texto en blanco */
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #ffca47; /* Color de fondo para el botón */
+  color: #104d62; /* Color del texto del botón */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d6f5ff; /* Cambia el color de fondo al pasar el ratón */
+  color: #104d62;
+}
+
+#evaluacion {
+  background-color: #104d62;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fffdfe;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #ffca47;
+  color: #104d62;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d6f5ff;
+  color: #104d62;
+}
+
+#faq {
+  background-color: #104d62;
+  padding: 40px 20px;
+  color: #fffdfe;
+}
+
+.pregunta {
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffca47;
+}
+
+p {
+  font-size: 16px;
+  margin-top: 10px;
+}

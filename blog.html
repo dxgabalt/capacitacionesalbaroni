@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog - Capacitaciones Alba Roni</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
+
+  <style>
+    /* Estilos específicos para la página del blog */
+    #blog {
+      padding: 40px;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    #blog h2 {
+      font-size: 36px;
+      margin-top: 90px;
+
+      font-weight: bold;
+      color: #104d62;
+    }
+
+    .articulo-blog {
+      margin: 20px 0;
+    }
+
+    .articulo-blog h3 {
+      font-size: 24px;
+      color: #104d62;
+    }
+
+    .articulo-blog p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ... Resto de los estilos ... */
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <link rel="icon" href="logo.png">
+</head>
+<body>
+
+  <header>
+    <div class="header-title">Capacitaciones Alba Roni</div>
+    <nav>
+        <div class="menu-icon">&#9776;</div>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-nosotros.html">Acerca de</a></li>
+          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <button class="menu-button"> Menú</button>
+    </nav>
+</header>
+
+<main>
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="articulo-blog">
+      <h3>Estrés y ansiedad en la vida moderna</h3>
+      <p>En este artículo exploramos las causas y formas de gestionar el estrés y la ansiedad en la vida cotidiana. Descubre consejos prácticos para mejorar tu bienestar mental.</p>
+      <a href="#">Leer más</a>
+    </div>
+    <div class="articulo-blog">
+      <h3>Reflexión sobre la comunicación efectiva</h3>
+      <p>La comunicación efectiva es clave en todas las áreas de la vida. Reflexionamos sobre su importancia y ofrecemos consejos para mejorar tus habilidades comunicativas.</p>
+      <a href="#">Leer más</a>
+    </div>
+    <div class="articulo-blog">
+      <h3>Baja autoestima, buena autoestima y narcisismo</h3>
+      <p>Exploramos las diferencias entre la baja autoestima, una autoestima saludable y el narcisismo. Comprende cómo influyen en tu vida y cómo mejorar tu autoconcepto.</p>
+      <a href="#">Leer más</a>
+    </div>
+    <!-- Agrega más artículos según sea necesario -->
+  </section>
+</main>
+
+  <footer>
+    <div class="footer-info">
+      <p>Capacitaciones Alba Roni &copy; 2023</p>
+      <a href="#top" class="boton-ir-arriba">Volver arriba</a>
+    </div>
+    <div class="footer-links">
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Términos de Uso</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const menuButton = document.querySelector('.menu-button');
+    const menu = document.querySelector('.menu');
+
+    menuIcon.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+
+    menuButton.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>

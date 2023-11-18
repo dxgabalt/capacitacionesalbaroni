@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - Capacitaciones Alba Roni</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos específicos para la página de contacto */
+    #contacto {
+      padding: 40px;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    #contacto h2 {
+      font-size: 36px;
+      margin-top: 90px;
+      font-weight: bold;
+      color: #104d62;
+    }
+
+    .parrafo-contacto {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    /* Agrega estilos al formulario según sea necesario */
+
+    /* ... Resto de los estilos ... */
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <link rel="icon" href="logo.png"></head>
+<body>
+
+  <header>
+    <div class="header-title">Capacitaciones Alba Roni</div>
+    <nav>
+        <div class="menu-icon">&#9776;</div>
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-nosotros.html">Acerca de</a></li>
+          <li><a href="capacitaciones.html">Capacitaciones</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <button class="menu-button"> Menú</button>
+    </nav>
+</header>
+
+<main>
+  <section id="contacto" class="seccion">
+    <h2>Contacto</h2>
+    <p class="parrafo-contacto">Centro de Desarrollo Humano Alba Roni<br>Managua, Nicaragua<br>Tel: (505) 2255-5555<br>Email: info@capacitacionesalbanroni.com</p>
+    <form action="#" method="post">
+      <!-- Agrega aquí tu formulario de contacto -->
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+  </section>
+</main>
+
+  <footer>
+    <div class="footer-info">
+      <p>Capacitaciones Alba Roni &copy; 2023</p>
+      <a href="#top" class="boton-ir-arriba">Volver arriba</a>
+    </div>
+    <div class="footer-links">
+      <a href="#">Política de Privacidad</a>
+      <a href="#">Términos de Uso</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const menuButton = document.querySelector('.menu-button');
+    const menu = document.querySelector('.menu');
+
+    menuIcon.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+
+    menuButton.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>
